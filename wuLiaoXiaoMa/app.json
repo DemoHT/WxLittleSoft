@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/wzryTools/wzryTools",
+    "pages/devTools/timeStamp/timeStamp",
+    "pages/devTools/encrypt/encrypt"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "这是一个小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "debug": true
+}
