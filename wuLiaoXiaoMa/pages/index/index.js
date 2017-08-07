@@ -18,8 +18,8 @@ Page({
         name: '农药有毒',
         open: false,
         pages: [
-          {title: '防御计算', url: '/pages/wzryTools/wzryTools'},
-          {title: '铭文模拟', url: '/pages/wzryTools/mingwen'}
+          {title: '防御计算', url: '/pages/wzryTools/fangyu/fangyu'},
+          {title: '铭文模拟', url: '/pages/wzryTools/mingwen/mingwen'}
         ]
       }
     //   {
@@ -70,5 +70,8 @@ Page({
     this.setData({
       list: list
     });
+  },
+  onShareAppMessage: function (options) {
+    // share option
   }
 })

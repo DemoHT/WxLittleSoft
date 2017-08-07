@@ -27,7 +27,7 @@
             </block>
         </view>
     </view>
-    <view class="page__ft">
-        <image src="/static/images/icon_footer.png" style="width: 84px; height: 19px;"></image>
+    <view class="weui-footer">
+        <view class="weui-footer__text">Copyright © 2017-2028 DemoHT</view>
     </view>
 </view>

@@ -1,12 +1,24 @@
 var now = new Date();
-
 Page({
   data: {
     showTopTips: false,
 
-    date: now.toISOString().split("T")[0],
-    time: now.toISOString().split("T")[1].split(".")[0],
+    date: "",
+    time: "",
+    dateTime : "",
+    timeStamp: 0
   },
+
+  onLoad() {
+    var now = new Date();
+    this.setData({
+      date: now.format("yyyy-MM-dd"),
+      time: now.format("hh:mm"),
+      dateTime: now.format("yyyy-MM-dd hh:mm:ss"),
+      timeStamp: Math.floor(now.getTime() / 1000)
+    })
+  },
+
   showTopTips: function () {
     var that = this;
     this.setData({
@@ -18,71 +30,34 @@ Page({
       });
     }, 3000);
   },
-  radioChange: function (e) {
-    console.log('radio发生change事件，携带value值为：', e.detail.value);
 
-    var radioItems = this.data.radioItems;
-    for (var i = 0, len = radioItems.length; i < len; ++i) {
-      radioItems[i].checked = radioItems[i].value == e.detail.value;
-    }
-
-    this.setData({
-      radioItems: radioItems
-    });
-  },
-  checkboxChange: function (e) {
-    console.log('checkbox发生change事件，携带value值为：', e.detail.value);
-
-    var checkboxItems = this.data.checkboxItems, values = e.detail.value;
-    for (var i = 0, lenI = checkboxItems.length; i < lenI; ++i) {
-      checkboxItems[i].checked = false;
-
-      for (var j = 0, lenJ = values.length; j < lenJ; ++j) {
-        if (checkboxItems[i].value == values[j]) {
-          checkboxItems[i].checked = true;
-          break;
-        }
-      }
-    }
-
-    this.setData({
-      checkboxItems: checkboxItems
-    });
-  },
   bindDateChange: function (e) {
+    console.log("bindDateChange " + e.detail.value)
+    var tmpDate = new Date(this.data.date + " " + this.data.time)
     this.setData({
-      date: e.detail.value
+      date: e.detail.value,
+      timeStamp: Math.floor(tmpDate.getTime() / 1000),
+      dateTime: tmpDate.format("yyyy-MM-dd hh:mm:ss")
     })
   },
+
   bindTimeChange: function (e) {
+    console.log("bindTimeChange " + e.detail.value)
+    var tmpDate = new Date(this.data.date + " " + this.data.time)
     this.setData({
-      time: e.detail.value
+      time: e.detail.value,
+      timeStamp: Math.floor(tmpDate.getTime() / 1000),
+      dateTime: tmpDate.format("yyyy-MM-dd hh:mm:ss")
     })
   },
-  bindCountryCodeChange: function (e) {
-    console.log('picker country code 发生选择改变，携带值为', e.detail.value);
 
+  bindTimeStampChange: function (e) {
+    console.log("bindTimeStampChange " + e.detail.value)
+    var tmpDate = new Date(e.detail.value * 1000);
     this.setData({
-      countryCodeIndex: e.detail.value
+      date: tmpDate.format("yyyy-MM-dd"),
+      time: tmpDate.format("hh:mm"),
+      dateTime: tmpDate.format("yyyy-MM-dd hh:mm:ss")
     })
-  },
-  bindCountryChange: function (e) {
-    console.log('picker country 发生选择改变，携带值为', e.detail.value);
-
-    this.setData({
-      countryIndex: e.detail.value
-    })
-  },
-  bindAccountChange: function (e) {
-    console.log('picker account 发生选择改变，携带值为', e.detail.value);
-
-    this.setData({
-      accountIndex: e.detail.value
-    })
-  },
-  bindAgreeChange: function (e) {
-    this.setData({
-      isAgree: !!e.detail.value.length
-    });
   }
 });

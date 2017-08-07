@@ -1,2 +1,35 @@
-<!--encrypt.wxml-->
-<text>encrypt.wxml</text>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__hd">
+        <view class="page__title">加解密</view>
+        <view class="page__desc">MD5 SHA1 RSA...</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view>
+
+        <view class="weui-cells__title">MD5 / SHA1</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" placeholder="请输入文本" style="height: 3.3em" bindinput="bindInputChange" maxlength="-1"/>
+                    <view class="weui-textarea-counter">{{text.length}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" placeholder="MD5" value="{{md5Text}}" style="height: 2.5em"/>
+                    <view class="weui-textarea-counter">{{md5Text.length}} / MD5</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" placeholder="SHA1" value="{{sha1Text}}" style="height: 2.5em"/>
+                    <view class="weui-textarea-counter">{{sha1Text.length}} / SHA1</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

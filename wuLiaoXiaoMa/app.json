@@ -2,15 +2,17 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/wzryTools/wzryTools",
     "pages/devTools/timeStamp/timeStamp",
-    "pages/devTools/encrypt/encrypt"
+    "pages/devTools/encrypt/encrypt",
+    "pages/wzryTools/fangyu/fangyu",
+    "pages/wzryTools/mingwen/mingwen"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "这是一个小程序",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "Change The World",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
   },
   "debug": true
 }

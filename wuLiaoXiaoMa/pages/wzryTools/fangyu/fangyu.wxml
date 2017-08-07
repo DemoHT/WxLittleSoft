@@ -1,0 +1,47 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__hd">
+        <view class="page__title">防御计算</view>
+        <view class="page__desc">
+          <view>承伤上限 = (防御值 / 602 + 1) * 血量</view>
+          <view>减伤比例 = 防御值 / (防御值 + 602) * 100%</view>
+        </view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view>
+
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__hd">
+                  <view class="weui-label">防御值</view>
+              </view>
+              <view class="weui-cell__bd">
+                  <input class="weui-input" value="{{defense}}" bindinput="bindDefenseChange"/>
+              </view>
+          </view>
+          <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__hd">
+                  <view class="weui-label">血量</view>
+              </view>
+              <view class="weui-cell__bd">
+                  <input class="weui-input" value="{{hp}}" bindinput="bindHpChange"/>
+              </view>
+          </view>
+          <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__hd">
+                  <view class="weui-label">减伤</view>
+              </view>
+              <view class="weui-cell__bd">
+                  <input class="weui-input" value="{{damageRatio}}"/>
+              </view>
+          </view>
+          <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__hd">
+                  <view class="weui-label">承伤上限</view>
+              </view>
+              <view class="weui-cell__bd">
+                  <input class="weui-input" value="{{damageMax}}"/>
+              </view>
+          </view>
+        </view>
+    </view>
+</view>

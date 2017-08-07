@@ -1,0 +1,9 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__hd">
+        <view class="page__title">铭文模拟</view>
+        <view class="page__desc">To be continue...</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-toptips weui-toptips_info" wx:if="{{true}}">developing...</view>
+    </view>
+</view>

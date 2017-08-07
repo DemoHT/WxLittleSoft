@@ -1,4 +1,4 @@
-// wzryTools.js
+// mingwen.js
 Page({
 
   /**
