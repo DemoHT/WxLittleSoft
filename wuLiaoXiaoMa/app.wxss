@@ -9,7 +9,7 @@
   justify-content: space-between;
   padding: 100rpx 0;
   box-sizing: border-box;
-} 
+}
 
 
 page{
@@ -44,4 +44,14 @@ page{
     color: #888888;
     text-align: left;
     font-size: 14px;
+}
+
+.my-grid {
+  float:left;
+  width: 124rpx;
+  box-sizing:border-box;
+}
+.my-grid__icon {
+  width:122rpx;
+  height:122rpx;
 }

@@ -19,7 +19,8 @@ Page({
         open: false,
         pages: [
           {title: '防御计算', url: '/pages/wzryTools/fangyu/fangyu'},
-          {title: '铭文模拟', url: '/pages/wzryTools/mingwen/mingwen'}
+          {title: '铭文模拟', url: '/pages/wzryTools/mingwen/mingwen'},
+          {title: '英雄资料', url: '/pages/wzryTools/heros/heros'}
         ]
       }
     //   {

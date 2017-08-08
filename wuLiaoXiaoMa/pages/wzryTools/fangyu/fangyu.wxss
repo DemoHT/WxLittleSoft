@@ -1,5 +1,1 @@
 /* pages/wzryTools/fangyu/fangyu.wxss */
-image {
-  height: 100rpx;
-  width: 400rpx;
-}

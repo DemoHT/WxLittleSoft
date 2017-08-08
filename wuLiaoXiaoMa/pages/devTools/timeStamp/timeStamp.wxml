@@ -24,7 +24,7 @@
                 </view>
                 <view class="weui-cell__bd">
                     <picker mode="time" value="{{time}}" bindchange="bindTimeChange">
-                        <input class="weui-input" value="{{time}}"/>
+                        <view class="weui-input">{{time}}</view>
                     </picker>
                 </view>
             </view>
@@ -33,7 +33,7 @@
                     <view class="weui-label">时间输入</view>
                 </view>
                 <view class="weui-cell__bd">
-                    <input class="weui-input" placeholder="yyyy-MM-dd hh:mm:ss" value="{{dateTime}}" bindinput="bindDateTimeChange"/>
+                    <input class="weui-input" placeholder="yyyy-MM-dd hh:mm:ss" value="{{dateTime}}" bindinput="bindDateTimeChange" cursor-spacing="45"/>
                 </view>
             </view>
             <view class="weui-cell weui-cell_input">

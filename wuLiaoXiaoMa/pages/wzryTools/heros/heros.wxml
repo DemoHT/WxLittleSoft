@@ -1,0 +1,10 @@
+<view class="page">
+    <view>2</view>
+    <view class="weui-grids">
+        <block wx:for="{{heroList}}" wx:key="ename">
+            <navigator url="./heroInfo/heroInfo?ename={{item.ename}}" class="my-grid" hover-class="weui-grid_active">
+                <image class="my-grid__icon" src="/data/wzry/heroImage/{{item.ename}}.jpg" />
+            </navigator>
+        </block>
+    </view>
+</view>

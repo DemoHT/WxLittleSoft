@@ -26,27 +26,48 @@ Page({
   },
   bindDefenseChange: function (e) {
     var that = this
-    var defense = parseInt(e.detail.value)
-    this.setData({
-      defense: defense,
-      damageRatio: that.getDamageRatio(defense),
-      damageMax: that.getDamageMax(that.data.defense, that.data.hp)
-    })
+    if (e.detail.value) {
+      var defense = parseInt(e.detail.value)
+      this.setData({
+        defense: defense,
+        damageRatio: that.getDamageRatio(defense),
+        damageMax: that.getDamageMax(defense, that.data.hp)
+      })
+      return defense
+    } else {
+      this.setData({
+        defense: "",
+        damageRatio: "",
+        damageMax: ""
+      })
+      return ""
+    }
   },
   bindHpChange: function (e) {
     var that = this
-    var hp = parseInt(e.detail.value)
-    this.setData({
-      hp: hp,
-      damageRatio: that.getDamageRatio(that.data.defense),
-      damageMax: that.getDamageMax(that.data.defense, hp)
-    })
+    if (e.detail.value) {
+      var hp = parseInt(e.detail.value)
+      this.setData({
+        hp: hp,
+        damageMax: that.getDamageMax(that.data.defense, hp)
+      })
+      return hp
+    } else {
+      this.setData({
+        hp: "",
+        damageMax: ""
+      })
+      return ""
+    }
   },
 
   getDamageMax: function (defense, hp) {
+    defense = parseInt(defense)
+    hp = parseInt(hp)
     return Math.floor((defense/602 + 1) * hp)
   },
   getDamageRatio: function (defense) {
+    defense = parseInt(defense)
     return (defense / (defense + 602) * 100).toFixed(2) + "%"
   }
 })

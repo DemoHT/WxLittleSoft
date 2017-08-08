@@ -33,7 +33,7 @@ Page({
 
   bindDateChange: function (e) {
     console.log("bindDateChange " + e.detail.value)
-    var tmpDate = new Date(this.data.date + " " + this.data.time)
+    var tmpDate = new Date(e.detail.value + " " + this.data.time)
     this.setData({
       date: e.detail.value,
       timeStamp: Math.floor(tmpDate.getTime() / 1000),
@@ -43,7 +43,7 @@ Page({
 
   bindTimeChange: function (e) {
     console.log("bindTimeChange " + e.detail.value)
-    var tmpDate = new Date(this.data.date + " " + this.data.time)
+    var tmpDate = new Date(this.data.date + " " + e.detail.value)
     this.setData({
       time: e.detail.value,
       timeStamp: Math.floor(tmpDate.getTime() / 1000),
@@ -58,6 +58,16 @@ Page({
       date: tmpDate.format("yyyy-MM-dd"),
       time: tmpDate.format("hh:mm"),
       dateTime: tmpDate.format("yyyy-MM-dd hh:mm:ss")
+    })
+  },
+
+  bindDateTimeChange: function (e) {
+    console.log("bindDateTimeChange " + e.detail.value)
+    var tmpDate = new Date(e.detail.value);
+    this.setData({
+      date: tmpDate.format("yyyy-MM-dd"),
+      time: tmpDate.format("hh:mm"),
+      timeStamp: Math.floor(tmpDate.getTime() / 1000)
     })
   }
 });

@@ -5,14 +5,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    text: "",
+    statusCode: "",
+    header: ""
+  },
+
+  bindOnTap: function() {
+    var page = this
+    wx.request({
+      url: 'http://pvp.qq.com/web201605/herodetail/193.shtml',
+      success: function (response) {
+        console.log(response)
+        page.setData({
+          text: response.data,
+          statusCode: response.statusCode,
+          header: response.header
+        })
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
   },
 
   /**
@@ -26,7 +42,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**

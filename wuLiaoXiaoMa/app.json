@@ -5,14 +5,16 @@
     "pages/devTools/timeStamp/timeStamp",
     "pages/devTools/encrypt/encrypt",
     "pages/wzryTools/fangyu/fangyu",
-    "pages/wzryTools/mingwen/mingwen"
+    "pages/wzryTools/mingwen/mingwen",
+    "pages/wzryTools/heros/heros",
+    "pages/wzryTools/heros/heroInfo/heroInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Change The World",
+    "navigationBarTitleText": "无聊小码",
     "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": false
   },
   "debug": true
 }

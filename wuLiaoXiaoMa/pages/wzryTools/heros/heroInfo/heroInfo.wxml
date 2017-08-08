@@ -1,0 +1,2 @@
+<!--heroInfo.wxml-->
+<text>{{hero.cname}}, {{hero.title}}</text>
