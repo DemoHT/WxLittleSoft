@@ -6,8 +6,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    heroList: heroList.heroList
-    
+    heroList: heroList.heroList,
+    heroTypes: [
+      { "code": 3, "name": "坦克" },
+      { "code": 1, "name": "战士" },
+      { "code": 4, "name": "刺客" },
+      { "code": 2, "name": "法师" },
+      { "code": 5, "name": "射手" },
+      { "code": 6, "name": "辅助" },
+    ]
   },
 
   /**

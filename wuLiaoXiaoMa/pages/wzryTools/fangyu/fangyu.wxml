@@ -15,15 +15,15 @@
                   <view class="weui-label">防御值</view>
               </view>
               <view class="weui-cell__bd">
-                  <input class="weui-input" value="{{defense}}" bindinput="bindDefenseChange" cursor-spacing="135"/>
+                  <input class="weui-input" value="{{defense}}" bindinput="bindDefenseChange" cursor-spacing="135" type="number" focus="true"/>
               </view>
           </view>
           <view class="weui-cell weui-cell_input">
               <view class="weui-cell__hd">
-                  <view class="weui-label">血量</view>
+                  <view class="weui-label" type="number">血量</view>
               </view>
               <view class="weui-cell__bd">
-                  <input class="weui-input" value="{{hp}}" bindinput="bindHpChange" cursor-spacing="90"/>
+                  <input class="weui-input" value="{{hp}}" bindinput="bindHpChange" cursor-spacing="90" type="number"/>
               </view>
           </view>
           <view class="weui-cell weui-cell_input">

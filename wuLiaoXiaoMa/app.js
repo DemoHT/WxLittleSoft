@@ -3,9 +3,9 @@ App({
   onLaunch: function() {
     console.log("app.js onLaunch")
     //调用API从本地缓存中获取数据
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    // var logs = wx.getStorageSync('logs') || []
+    // logs.unshift(Date.now())
+    // wx.setStorageSync('logs', logs)
   },
 
   getUserInfo: function(cb) {
@@ -19,6 +19,9 @@ App({
         success: function(res) {
           that.globalData.userInfo = res.userInfo
           typeof cb == "function" && cb(that.globalData.userInfo)
+        },
+        fail : function(res) {
+          wx.openSetting() 
         }
       })
     }

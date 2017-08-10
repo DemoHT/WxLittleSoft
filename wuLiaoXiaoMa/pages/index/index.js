@@ -45,19 +45,17 @@ Page({
   },
   onLoad: function () {
     console.log('index.js onLoad')
+
     var that = this
     //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
+    app.getUserInfo(function (userInfo) {
+        console.log(userInfo)
+        //更新数据
+        that.setData({
+          userInfo: userInfo
+        })
       })
-    })
-  },
-  mottoTextTap: function() {
-    wx.navigateTo({
-      url: '../wzryTools/wzryTools',
-    })
+    console.log('index.js onLoad end')
   },
   kindToggle: function (e) {
     var id = e.currentTarget.id, list = this.data.list;

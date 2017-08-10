@@ -5,10 +5,13 @@
     </view>
     <view class="page__bd">
         <view class="weui-toptips weui-toptips_info" wx:if="{{true}}">developing...</view>
-        <view class="weui-cells">{{text}}123</view>
+        <view class="tabbar_group">
+          <view class="tabbar_item">{{text}}111</view>
 
-        <view class="weui-cells">{{statusCode}}444</view>
+          <view class="tabbar_item">{{statusCode}}222</view>
 
-        <view class="weui-cells">{{header}}555</view>
+          <view class="tabbar_item">{{header}}333</view>
+          <view class="tabbar_item">{{header}}444</view>
+        </view>
     </view>
 </view>

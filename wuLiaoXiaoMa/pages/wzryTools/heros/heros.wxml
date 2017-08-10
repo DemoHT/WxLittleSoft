@@ -1,10 +1,17 @@
 <view class="page">
-    <view>2</view>
-    <view class="weui-grids">
-        <block wx:for="{{heroList}}" wx:key="ename">
-            <navigator url="./heroInfo/heroInfo?ename={{item.ename}}" class="my-grid" hover-class="weui-grid_active">
-                <image class="my-grid__icon" src="/data/wzry/heroImage/{{item.ename}}.jpg" />
+
+<view class="page__bd page__bd_spacing">
+    <block wx:for="{{heroTypes}}" wx:for-item="heroType">
+      <view class="my-grid-header">{{heroType.name}}</view>
+      <view class="my-grid-body">
+        <block wx:for="{{heroList}}" wx:for-item="hero">
+            <navigator class="my-grid-icon" wx:if="{{hero.hero_type == heroType.code}}" 
+                       url="./heroInfo/heroInfo?ename={{hero.ename}}" hover-class="weui-grid_active">
+                <image src="/data/wzry/heroImage/{{hero.ename}}.jpg" />
             </navigator>
         </block>
-    </view>
+      </view>
+    </block>
+
+</view>
 </view>

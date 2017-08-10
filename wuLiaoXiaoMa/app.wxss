@@ -14,44 +14,69 @@
 
 page{
     background-color: #F8F8F8;
-    font-size: 16px;
+    font-size: 32rpx;
     font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
 }
 .page__hd {
-    padding: 40px;
+    padding: 80rpx;
 }
 .page__bd {
-    padding-bottom: 40px;
+    padding-bottom: 80rpx;
 }
 .page__bd_spacing {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
 }
 
 .page__ft{
-    padding-bottom: 10px;
+    padding-bottom: 20rpx;
     text-align: center;
 }
 
 .page__title {
     text-align: left;
-    font-size: 20px;
+    font-size: 40rpx;
     font-weight: 400;
 }
 
 .page__desc {
-    margin-top: 5px;
+    margin-top: 10rpx;
     color: #888888;
     text-align: left;
-    font-size: 14px;
+    font-size: 28rpx;
 }
 
-.my-grid {
-  float:left;
-  width: 124rpx;
-  box-sizing:border-box;
+.my-grid-header {
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  padding: 5rpx 10rpx;
+  background-color: #fff;
+  border-top-left-radius: 8rpx;
+  border-top-right-radius: 8rpx;
+  border-top: 1rpx solid #d9d9d9;
 }
-.my-grid__icon {
-  width:122rpx;
-  height:122rpx;
+.my-grid-body {
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff;
+  border-bottom-left-radius: 8rpx;
+  border-bottom-right-radius: 8rpx;
+  border-bottom: 1rpx solid #d9d9d9; 
+}
+
+.my-grid-icon {
+  float: left;
+  width:115rpx;
+  height:115rpx;
+  margin: 0;
+  padding: 1rpx 1rpx;
+  box-sizing: border-box;
+}
+.my-grid-icon image {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
